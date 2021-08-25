@@ -1,4 +1,4 @@
-# JavaScript Essentail Assessment 2
+# JavaScript Essential Assessment 2
 
 ## Project Instruction
 A simple web page with appropriate styling, an embedded script, and a document containing test cases and a summary of two possible cyber security risks.
