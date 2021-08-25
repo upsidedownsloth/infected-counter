@@ -14,11 +14,11 @@
             <div class="grid-container">
                 <section class="container-left top">
                     <h1>Number of Zombies currently in the area</h1>
-                    <h2 id="infected"></h2>
+                    <h2 id="infectedNum"></h2>
                 </section>
                 <section class="container-left bottom">
                     <h1>Number of the infected appeared in the area last month</h1>
-                    <h2 id="incoming"></h2>
+                    <h2 id="incomingNum"></h2>
                 </section>
                 <aside class="container-right">
                     <h1>Output</h1>
@@ -30,7 +30,36 @@
 </main>
 
     <script>
+        //number of Zombie currently in the area
+        let infectedNum = document.getElementById("infectedNum");
+        let infected = prompt("Please enter number of Zombies currently in the area");
+        // if user hit ok, JS returns an empty string
+        if (infected === ""){
+            infectedNum.textContent = "0";
+        }else{
+            infectedNum.textContent = infected;
+        }
 
+        //number of incoming
+        let incomingNum = document.getElementById("incomingNum");
+        let incoming = prompt("Please enter the number of infected that have appeared in the area in the last month.");
+
+        if (incoming === ""){
+            incomingNum.textContent = "0";
+        }else{
+            incomingNum.textContent = incoming;
+        }
+
+        //calculations
+        let currentMonth = 1;
+        let totalMonth = 12;
+        let totalInfected = parseInt(infected) + parseInt(incoming);
+
+        //output
+        let output = document.getElementById("output");
+        let outputMessage = `There will be ${totalInfected} in the area after ${currentMonth} month(s)`;
+        output.textContent = outputMessage;
+        console.log(outputMessage);
     </script>
 </body>
 </html>
