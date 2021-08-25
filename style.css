@@ -15,7 +15,7 @@
 
 html {
     font-size: 100%;
-    background-color: rgb(99, 99, 99);
+    background-color: rgba(0, 0, 0, 0.884);
 }
 
 .title {
@@ -26,7 +26,12 @@ html {
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin: 2rem;
 }
 
 .grid-container {
