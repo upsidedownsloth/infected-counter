@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 2</title>
+    <title>Infected Presence Increase Calculation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -57,8 +57,8 @@
 
         //output
         let output = document.getElementById("output");
-        let outputMessage = `There will be ${totalInfected} in the area after ${currentMonth} month(s)`;
-        output.textContent = outputMessage;
+        let outputMessage = `There will be ${totalInfected} in the area after ${currentMonth} month(s) <br>`;
+        output.innerHTML = outputMessage;
         console.log(outputMessage);
     </script>
 </body>
