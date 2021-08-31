@@ -21,7 +21,8 @@ html {
 .title {
     font-size: 4rem;
     text-align: center;
-    color: white;
+    /* color: white; */
+    color:  #FCE29D;
     margin: 3rem;
 }
 
@@ -62,11 +63,11 @@ input [type=number]{
 }
 
 .top {
-    background-color: rgb(255, 0, 0, 0.6);
+    background-color: rgba(161, 29, 42)
 }
 
 .bottom {
-    background-color: rgba(217, 255, 0, 0.6);
+    background-color: rgba(237, 185, 55);
     grid-row: 2;
 }
 
@@ -85,4 +86,16 @@ input [type=number]{
     .container-right {
         grid-row: auto;
     }
+}
+
+.credits {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: #FCE29D;
+}
+
+.credits a {
+    /* text-decoration:underline; */
+    color: #FCE29D;
 }
