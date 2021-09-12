@@ -5,15 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /* font-family: 'Ubuntu', sans-serif; */
 
-
-* {
+html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Syne Mono', monospace;
-}
-
-html {
     font-size: 100%;
     background-color: rgba(0, 0, 0, 0.884);
 }
@@ -38,6 +34,15 @@ h2 {
 p {
     font-size: 1.5rem;
 }
+/* 
+.heading img{
+        width: 250px;
+        border-radius: 3rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -9999;
+} */
 
 .grid-container {
     width: 80%;
@@ -88,7 +93,19 @@ input [type=number]{
     }
 }
 
+.provided-img{
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.provided-img img{
+    width: 200px;
+    border-radius: 10rem;
+}
+
 .credits {
+    box-sizing: border-box;
     position: fixed;
     bottom: 0;
     right: 0;
