@@ -10,33 +10,39 @@
 </head>
 <body>
     <main>
-        <div class="heading">
-        <h1 class="title">Infected Presence Increase Calculation
-        <!-- <img src="images/umbrellabg.jpg" alt="umbralla company image"> -->
-    </h1>
-    </div>
+        <!-- HEADING -->
         <section>
-            <div class="grid-container">
-                <section class="container-left top">
+        <div class="heading">
+            <h1 class="title">Infected Presence Increase Calculation
+                <img class="provided-img" src="images/umbrellabg.jpg" alt="umbralla company image">
+            </h1>
+        </div>
+        </section>
+        <section class="grid-container">
+            <div class="container-left top">
                     <h1>Number of Zombies currently in the area</h1>
                     <h2 id="infectedNum"></h2>
-                </section>
-                <section class="container-left bottom">
+            </div>
+                <div class="container-left bottom">
                     <h1>Number of the infected appeared in the area last month</h1>
                     <h2 id="incomingNum"></h2>
-                </section>
-                <aside class="container-right">
+                </div>
+                <div class="container-right">
                     <h1>Output</h1>
                     <p id="output"></p>
-                </aside>
-            </div>
-            <div class="provided-img">
-                <img src="images/umbrellabg.jpg" alt="umbrealla company background image">
-            </div>
+                </div>
         </section>
 </main>
 
+<!-- FOOTER -->
+<footer>
+    <div class="credits">
+        Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+    </div>
+</footer>
+
     <script>
+
         //number of Zombie currently in the area
         let infectedNum = document.getElementById("infectedNum");
         let infected = prompt("Please enter number of Zombies currently in the area");
@@ -49,7 +55,7 @@
 
         //number of incoming
         let incomingNum = document.getElementById("incomingNum");
-        let incoming = prompt("Please enter the number of infected that have appeared in the area in the last month.");
+        let incoming = prompt("Please enter the number of the infected appeared in the area in the last month.");
 
         if (incoming === ""){
             incomingNum.textContent = "0";
@@ -68,8 +74,6 @@
         output.innerHTML = outputMessage;
         console.log(outputMessage);
     </script>
-    <footer>
-        <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-    </footer>
+    
 </body>
 </html>
