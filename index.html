@@ -42,10 +42,10 @@
 </footer>
 
     <script>
-
         //number of Zombie currently in the area
-        let infectedNum = document.getElementById("infectedNum");  //string
-        let infected = prompt("Please enter number of Zombies currently in the area"); //string
+        let infectedNum = document.getElementById("infectedNum");
+        let infected = prompt("Please enter number of Zombies currently in the area");
+
         // if user hit ok, JS returns an empty string. Setting it to 0 (string)
         if (infected === ""){
             infectedNum.textContent = "0";
@@ -53,7 +53,7 @@
             infectedNum.textContent = infected;
         }
 
-        // //number of incoming
+        //number of incoming
         let incomingNum = document.getElementById("incomingNum"); //String
         let incoming = prompt("Please enter the number of the infected appeared in the area in the last month."); //String
         if (incoming === ""){
@@ -68,14 +68,12 @@
 
         //output
         let output = document.getElementById("output");
-        //parsing infected to int for calculation
-        // let totalInfected = parseInt(infected) + parseInt(incoming);
-        // let outputMessage = `There will be ${totalInfected} in the area after ${currentMonth} month(s) <br>`;
         
         //while loop
         while(currentMonth <= totalMonth){
             // infected += String(totalInfected);
             let outputMessage = `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;
+            //parsing infected to int for calculation
             infected = parseInt(infected) + parseInt(incoming);
             output.innerHTML += outputMessage;
             console.log("Current month: " + currentMonth);
@@ -83,10 +81,6 @@
             console.log(output);
             currentMonth++;
         }
-
-
-
     </script>
-    
 </body>
 </html>
