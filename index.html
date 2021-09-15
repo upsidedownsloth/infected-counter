@@ -44,6 +44,7 @@
     <script>
         let infectedNum = document.getElementById("infectedNum");
         let infected = prompt("Enter number of Zombies currently in the area");
+        infected = Number(infected);
         if (infected === "") {
             infectedNum.textContent = 0;
         } else {
@@ -51,6 +52,7 @@
         }
         let incomingNum = document.getElementById("incomingNum");
         let incoming = prompt("Enter the number of the effected appeared in the area in the last month.");
+        incoming = Number(incoming);
         if (incoming === "") {
             incomingNum.textContent = 0;
         } else {
@@ -62,7 +64,7 @@
         let totalMonth = 12;
         let output = document.getElementById("output");
         while (currentMonth <= totalMonth) {
-            infected = Number(infected) + Number(incoming);
+            infected = infected + incoming;
             output.innerHTML += `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;
             currentMonth++;
         }
