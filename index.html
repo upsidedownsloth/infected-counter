@@ -40,20 +40,20 @@
     <script>
         //number of Zombie currently in the area
         let infectedNum = document.getElementById("infectedNum");
-        let infected = prompt("Please enter number of Zombies currently in the area");
+        let infected = prompt("Enter number of Zombies currently in the area");
 
         // if user hit ok, JS returns an empty string. Setting it to 0 (string)
         if (infected === ""){
-            infectedNum.textContent = "0";
+            infectedNum.textContent = 0;
         }else{
             infectedNum.textContent = infected;
         }
-
+        
         //number of incoming
         let incomingNum = document.getElementById("incomingNum"); //String
-        let incoming = prompt("Please enter the number of the infected appeared in the area in the last month."); //String
+        let incoming = prompt("Enter the number of the effected appeared in the area in the last month."); //String
         if (incoming === ""){
-            incomingNum.textContent = "0";
+            incomingNum.textContent = 0;
         }else{
             incomingNum.textContent = incoming;
         }
@@ -61,20 +61,13 @@
         //calculations
         let currentMonth = 1;
         let totalMonth = 12;
-
         //output
         let output = document.getElementById("output");
         
         //while loop
         while(currentMonth <= totalMonth){
-            // infected += String(totalInfected);
-            let outputMessage = `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;
-            //parsing infected to int for calculation
-            infected = parseInt(infected) + parseInt(incoming);
-            output.innerHTML += outputMessage;
-            console.log("Current month: " + currentMonth);
-            console.log("Infected total: " + infected);
-            console.log(output);
+            infected = Number(infected) + Number(incoming);
+            output.innerHTML += `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;;
             currentMonth++;
         }
     </script>
