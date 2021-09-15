@@ -42,24 +42,18 @@
 
     <!-- SCRIPT -->
     <script>
+        // INPUT
         let infectedNum = document.getElementById("infectedNum");
-        let infected = prompt("Enter number of Zombies currently in the area");
+        let infected = prompt("Enter number of Zombies currently in the area", "0");
         infected = Number(infected);
-        if (infected === "") {
-            infectedNum.textContent = 0;
-        } else {
-            infectedNum.textContent = infected;
-        }
-        let incomingNum = document.getElementById("incomingNum");
-        let incoming = prompt("Enter the number of the effected appeared in the area in the last month.");
-        incoming = Number(incoming);
-        if (incoming === "") {
-            incomingNum.textContent = 0;
-        } else {
-            incomingNum.textContent = incoming;
-        }
+        infectedNum.textContent = infected;
 
-        //calculations
+        let incomingNum = document.getElementById("incomingNum");
+        let incoming = prompt("Enter the number of the effected appeared in the area in the last month.", "0");
+        incoming = Number(incoming);
+        incomingNum.textContent = incoming;
+
+        //CALCULATIONS
         let currentMonth = 1;
         let totalMonth = 12;
         let output = document.getElementById("output");
