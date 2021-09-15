@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,68 +9,64 @@
     <link rel="icon" href="images/biohazard.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <!-- HEADING -->
         <section>
-        <div class="heading">
-            <h1 class="title">Infected Presence Increase Calculation
-            </h1>
-            <img src="images/umbrellabg.jpg" alt="umbralla company image">
-        </div>
+            <div class="heading">
+                <h1 class="title">Infected Presence Increase Calculation
+                </h1>
+                <img src="images/umbrellabg.jpg" alt="umbralla company image">
+            </div>
         </section>
         <section class="grid-container">
             <div class="container-left top">
-                    <h1>Number of Zombies currently in the area</h1>
-                    <h2 id="infectedNum"></h2>
+                <h1>Number of Zombies currently in the area</h1>
+                <h2 id="infectedNum"></h2>
             </div>
-                <div class="container-left bottom">
-                    <h1>Number of the infected appeared in the area last month</h1>
-                    <h2 id="incomingNum"></h2>
-                </div>
-                <div class="container-right">
-                    <h1>Output</h1>
-                    <p id="output"></p>
-                </div>
+            <div class="container-left bottom">
+                <h1>Number of the infected appeared in the area last month</h1>
+                <h2 id="incomingNum"></h2>
+            </div>
+            <div class="container-right">
+                <h1>Output</h1>
+                <p id="output"></p>
+            </div>
         </section>
         <div class="credits">
-            Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from
+            <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
         </div>
-</main>
+    </main>
 
+    <!-- SCRIPT -->
     <script>
-        //number of Zombie currently in the area
         let infectedNum = document.getElementById("infectedNum");
         let infected = prompt("Enter number of Zombies currently in the area");
-
-        // if user hit ok, JS returns an empty string. Setting it to 0 (string)
-        if (infected === ""){
+        if (infected === "") {
             infectedNum.textContent = 0;
-        }else{
+        } else {
             infectedNum.textContent = infected;
         }
-        
-        //number of incoming
-        let incomingNum = document.getElementById("incomingNum"); //String
-        let incoming = prompt("Enter the number of the effected appeared in the area in the last month."); //String
-        if (incoming === ""){
+        let incomingNum = document.getElementById("incomingNum");
+        let incoming = prompt("Enter the number of the effected appeared in the area in the last month.");
+        if (incoming === "") {
             incomingNum.textContent = 0;
-        }else{
+        } else {
             incomingNum.textContent = incoming;
         }
 
         //calculations
         let currentMonth = 1;
         let totalMonth = 12;
-        //output
         let output = document.getElementById("output");
-        
-        //while loop
-        while(currentMonth <= totalMonth){
+        while (currentMonth <= totalMonth) {
             infected = Number(infected) + Number(incoming);
-            output.innerHTML += `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;;
+            output.innerHTML += `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;
             currentMonth++;
         }
     </script>
 </body>
+
 </html>
