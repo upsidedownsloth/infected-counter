@@ -15,8 +15,7 @@
         <!-- HEADING -->
         <section>
             <div class="heading">
-                <h1 class="title">Infected Presence Increase Calculation
-                </h1>
+                <h1 class="title">Infected Presence Increase Calculation</h1>
                 <img src="images/umbrellabg.jpg" alt="umbralla company image">
             </div>
         </section>
@@ -26,7 +25,7 @@
                 <h2 id="infectedNum"></h2>
             </div>
             <div class="container-left bottom">
-                <h1>Number of the infected appeared in the area last month</h1>
+                <h1>Number of infected appeared in the area last month</h1>
                 <h2 id="incomingNum"></h2>
             </div>
             <div class="container-right">
@@ -43,21 +42,22 @@
     <!-- SCRIPT -->
     <script>
         // INPUT
-        let infectedNum = document.getElementById("infectedNum");
         let infected = prompt("Enter number of Zombies currently in the area", "0");
         infected = Number(infected);
-        infectedNum.textContent = infected;
-
-        let incomingNum = document.getElementById("incomingNum");
-        let incoming = prompt("Enter the number of the effected appeared in the area in the last month.", "0");
+        let incoming = prompt("Enter the number of infected appeared in the area in the last month.", "0");
         incoming = Number(incoming);
+        
+        // MODIFYING DOM
+        let infectedNum = document.getElementById("infectedNum");
+        infectedNum.textContent = infected;
+        let incomingNum = document.getElementById("incomingNum");
         incomingNum.textContent = incoming;
 
-        //CALCULATIONS
+        // CALCULATIONS
         let currentMonth = 1;
-        let totalMonth = 12;
+        let totalMonths = 12;
         let output = document.getElementById("output");
-        while (currentMonth <= totalMonth) {
+        while (currentMonth <= totalMonths) {
             infected = infected + incoming;
             output.innerHTML += `There will be ${infected} infected in the area after ${currentMonth} month(s). <br>`;
             currentMonth++;
